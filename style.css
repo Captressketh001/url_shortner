@@ -72,6 +72,14 @@ ul{
     height: auto;
     margin-right: -120px;
 }
+.features div button{
+    background-color: hsl(180, 66%, 49%);
+    color: #fff;
+    width: 25%;
+    height: 40px;
+    border-radius: 20px;
+    border-style: none;
+}
 .features .intro-img{
     margin-left: auto;
     flex: 1;
@@ -81,5 +89,49 @@ ul{
         flex-direction: column-reverse;
         text-align: center;
     }
+    .features div button{
+        width: 40%;
+    }
+}
+.shorten{
+    margin-top: 50px;
+    width: 80%;
+    border-radius: 5px;
+    height: auto;
+    background: url(./images/bg-shorten-desktop.svg);
+    background-position: 8% 20%;
+    background-color: black;
+    text-align: center;
+    padding: 40px 0px;
+}
+.shorten input{
+    height: 40px;
+    border-radius: 5px;
+    border-style: none;
+    outline: none;
 }
 
+.shorten input[type='url']{
+    width: 80%;
+}
+.shorten input[type='url' i]{
+  padding-left: 10px;
+}
+.shorten input[type='submit']{
+    background-color: hsl(180, 66%, 49%);
+    color: #fff;
+    width: 10%;
+}
+
+@media all and (max-width: 737px){
+    .shorten{
+        background: url(./images/bg-shorten-mobile.svg);
+        background-color: hsl(257, 27%, 26%);
+        background-position: 0% 0%;
+        height: auto;
+    }
+    .shorten input[type='submit']{
+        width: 80%;
+        margin-top: 10%;
+    }
+}
