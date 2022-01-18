@@ -1,6 +1,8 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); */
 *{
     box-sizing: border-box;
     margin: 0 auto;
+    /* font-family: 'Poppins', sans-serif; */
 }
 ul{
     list-style: none;
@@ -65,7 +67,7 @@ ul{
     width: 80%;
     align-items: center;
     gap: 30px;
-    
+    margin-bottom: 60px;
 }
 .features div img{
     width: 100%;
@@ -93,6 +95,8 @@ ul{
         width: 40%;
     }
 }
+
+
 .shorten{
     margin-top: 50px;
     width: 80%;
@@ -135,64 +139,112 @@ ul{
         margin-top: 10%;
     }
 }
-.link_performance{
+.link{
     background: hsl(220, 16%, 96%);
-    min-height: 600px;
+    height: 800px;
     display: flex;
+    /* flex-wrap: wrap; */
     justify-content: center;
     align-items: center;
-    
+    width: 100%;
 }
-.link_performance > div{
+.link > div{
     width: 80%;
     min-height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 80px;
+    /* align-content: space-between; */
 }
-.feature-items{
-    padding: 45px;
+.link-items{
+    padding: 50px 30px;
     background: #fff;
     border-radius: 5px;
+    height: 300px;
 }
-.feature-items img{
+.link-items p{
+    font-size: 18px;
+    line-height: 30px;
+}
+.link-body{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    height: 370px;
+    position: relative;
+}
+.link-header {
+    text-align: center;
+}
+.link-header p{
+    width: 65%;
+}
+.brand::before{
+    content:url(./images/icon-brand-recognition.svg);
+    margin-top: -80px;
     position: absolute;
-    top: -85px;
-    left: -25px;
     padding: 10px;
     border-radius: 34px;
     background: hsl(257, 27%, 26%)
 }
-.feature-body{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
-    height: auto;
-    /* padding: 30px; */
+
+.detailed{
+    align-self: center;
 }
-/* .feature-header p{
-    width: 47%;
-} */
-.feature-header{
-    text-align: center;
+.customizable{
+    align-self: flex-end;
+}
+.detailed::before{
+    content: url(./images/icon-detailed-records.svg);
+    margin-top: -80px;
+    position: absolute;
+    padding: 10px;
+    border-radius: 34px;
+    background: hsl(257, 27%, 26%);
+}
+.customizable::before{
+    content: url(./images/icon-fully-customizable.svg);
+    margin-top: -80px;
+    position: absolute;
+    padding: 10px;
+    border-radius: 34px;
+    background: hsl(257, 27%, 26%)
+}
+span{
+    width: 80%;
+    height: 10px;
+    background: hsl(180, 66%, 49%);
+    position: absolute;
+    margin-top: 257px;
 }
 @media screen and (max-width:768px){
-    .feature-items{
-        text-align: center;
-    }
-    .feature-body{
-        grid-template-columns: 1fr;
+    .link{
+        padding-bottom: 30px;
         height: auto;
     }
-    .features > div{
-        text-align: center;
+    .link-body{
+        flex-direction: column;
+        gap: 80px;
+        height: auto;
     }
-    /* .feature-items{
-        padding: 0;
-    } */
-    .feature-header p{
+    .link > div{
+        text-align: center;
+        gap: 40px;
+    }
+    .link-header{
+        margin: 60px 0;
+    }
+    .link-header p{
         width: auto;
     }
+    .detailed, .customizable{
+        align-self: auto;
+    }
+    .brand::before, .detailed::before, .customizable::before{
+        margin-left: -31px;
+    }
+   
 }
 .call-to-action{
     width: 100%;
@@ -220,6 +272,9 @@ ul{
     height: 40px;
     border-radius: 20px;
     border-style: none;
+}
+h2{
+    font-weight: 700;
 }
 footer{
     background: hsl(260, 8%, 14%);
