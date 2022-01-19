@@ -69,6 +69,17 @@ ul{
     gap: 30px;
     margin-bottom: 60px;
 }
+/* .features .fe{
+    display: flex;
+    flex-direction: column;
+} */
+/* .features .fe p{
+    width: 60%;
+}
+.features > div > h1{
+    width: 40%;
+    text-align: left;
+} */
 .features div img{
     width: 100%;
     height: auto;
@@ -94,11 +105,11 @@ ul{
     .features div button{
         width: 40%;
     }
-}
+} 
 
 
 .shorten{
-    margin-top: 50px;
+    /* margin-top: -57px; */
     width: 80%;
     border-radius: 5px;
     height: auto;
@@ -107,6 +118,9 @@ ul{
     background-color: hsl(257, 27%, 26%);
     text-align: center;
     padding: 40px 0px;
+    display: flex;
+    position: relative;
+    top: 59px;
 }
 .shorten input{
     height: 40px;
@@ -127,12 +141,14 @@ ul{
     width: 10%;
 }
 
-@media all and (max-width: 737px){
+@media all and (max-width: 768px){
     .shorten{
         background: url(./images/bg-shorten-mobile.svg);
         background-color: hsl(257, 27%, 26%);
         background-position: 0% 0%;
         height: auto;
+        flex-direction: column;
+        top: 96px;
     }
     .shorten input[type='submit']{
         width: 80%;
@@ -233,7 +249,7 @@ span{
         gap: 40px;
     }
     .link-header{
-        margin: 60px 0;
+        margin: 115px 0;
     }
     .link-header p{
         width: auto;
@@ -244,7 +260,45 @@ span{
     .brand::before, .detailed::before, .customizable::before{
         margin-left: -31px;
     }
+    span{
+        width: 2%;
+        height: 857px;
+        background: hsl(180, 66%, 49%);
+        position: absolute;
+        margin-top: 308px;
+        left: 375px;
+    }
    
+}
+@media screen and (max-width:425px){
+    span{
+        width: 2%;
+        height: 857px;
+        background: hsl(180, 66%, 49%);
+        position: absolute;
+        margin-top: 308px;
+        left: 207px;
+    }
+}
+@media screen and (max-width:375px){
+    span{
+        width: 2%;
+        height: 857px;
+        background: hsl(180, 66%, 49%);
+        position: absolute;
+        margin-top: 324px;
+        left: 180px;
+    }
+}
+@media screen and (max-width:320px){
+    span{
+        width: 2%;
+        height: 857px;
+        background: hsl(180, 66%, 49%);
+        position: absolute;
+        margin-top: 326px;
+        left: 157px;
+    }
 }
 .call-to-action{
     width: 100%;
